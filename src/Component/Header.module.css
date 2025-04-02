@@ -1,0 +1,215 @@
+/*  GLOBAL STYLES  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* HEADER  */
+
+header {
+  background: url("https://img.freepik.com/free-photo/photorealistic-refugee-camp_23-2151446251.jpg")
+    no-repeat center/cover;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 50px 20px;
+  position: relative;
+}
+
+/*  HEADER TITLE  */
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* NAVBAR */
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(30, 60, 114, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 15px 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(45deg, #ffdd57, #ff5733);
+  border-image-slice: 1;
+}
+
+/* NAVBAR MENU */
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+}
+
+nav ul li a {
+  font-size: 1.2rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  padding: 12px 18px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+/* UNDERLINE EFFECT ON HOVER */
+
+nav ul li a::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(45deg, #ffdd57, #ff5733);
+  transition: width 0.3s ease-in-out;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* NAVBAR SCROLL EFFECT */
+
+nav.scrolled {
+  background: rgba(30, 60, 114, 0.95);
+  padding: 10px 0;
+  backdrop-filter: blur(12px);
+}
+
+/* MAIN CONTENT */
+
+main {
+  background: #ffe3e3;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+/* HEADINGS */
+
+h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #333;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* PARAGRAPHS */
+
+p {
+  font-size: 1.25rem;
+  color: #555;
+  max-width: 700px;
+  margin: 20px auto;
+  line-height: 1.6;
+}
+
+/* BUTTONS */
+
+button {
+  background: #e63946;
+  color: white;
+  padding: 14px 28px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  background: #d62839;
+  transform: scale(1.05);
+}
+
+/* SECTION */
+
+section {
+  padding: 80px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+  background: #222;
+  color: white;
+  padding: 20px 0;
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 1px;
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
+}
+
+footer a {
+  color: #ffdd57;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* MEDIA QUERIES (Mobile Responsive) */
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+  h1,
+  h2 {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+  nav {
+    padding: 10px 0;
+  }
+}
