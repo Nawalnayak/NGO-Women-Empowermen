@@ -1,188 +1,192 @@
 /* Navbar Styles */
-.Navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: hsl(168, 78%, 58%); 
-  transition: all 0.4s ease-in-out;
-  z-index: 1000;
-}
 
+.Navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: hsl(168, 78%, 58%);
+    transition: all 0.4s ease-in-out;
+    z-index: 1000;
+}
 
 .scrolled {
-  background: #000;
+    background: #000;
 }
 
-
 .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: white;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 }
 
 .logo:hover {
-  transform: scale(1.1);
-  color: #f1c40f;
+    transform: scale(1.1);
+    color: #f1c40f;
 }
 
-
 .navLinks {
-  display: flex;
-  gap: 20px;
-  list-style: none;
+    display: flex;
+    gap: 20px;
+    list-style: none;
 }
 
 .link {
-  text-decoration: none;
-  color: white;
-  font-size: 1.1rem;
-  font-weight: 500;
-  transition: color 0.3s ease-in-out;
-  position: relative;
-  padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+    position: relative;
+    padding: 5px 10px;
 }
 
 .link::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: -5px;
-  left: 50%;
-  background: #21211f;
-  transition: all 0.3s ease-in-out;
-  transform: translateX(-50%);
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background: #21211f;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
 }
 
 .link:hover {
-  color: #353430;
+    color: #353430;
 }
 
 .link:hover::after {
-  width: 100%;
+    width: 100%;
 }
 
+
 /* Donate Button - Animated */
+
 .donateButton {
-  background: linear-gradient(90deg, #e74c3c, #ff6b6b);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  border-radius: 5px;
-  font-weight: bold;
-  text-transform: uppercase;
-  animation: blinkEffect 1.5s infinite alternate;
+    background: linear-gradient(90deg, #e74c3c, #ff6b6b);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: blinkEffect 1.5s infinite alternate;
 }
 
 .donateButton:hover {
-  background: linear-gradient(90deg, #ff6b6b, #e74c3c);
-  transform: scale(1.05);
+    background: linear-gradient(90deg, #ff6b6b, #e74c3c);
+    transform: scale(1.05);
 }
+
 
 /* Blink Animation for Donate Button */
+
 @keyframes blinkEffect {
-  0% {
-    box-shadow: 0 0 10px rgba(231, 76, 60, 0.7);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(231, 76, 60, 1);
-  }
-  100% {
-    box-shadow: 0 0 10px rgba(231, 76, 60, 0.7);
-  }
+    0% {
+        box-shadow: 0 0 10px rgba(231, 76, 60, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(231, 76, 60, 1);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(231, 76, 60, 0.7);
+    }
 }
 
+
 /* Mobile Styles */
+
 .menuButton {
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  display: none;
-  font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+    font-size: 1.5rem;
 }
 
 @media (max-width: 768px) {
-  .menuButton {
-    display: block;
-  }
-
-  .navLinks {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #000; 
-    flex-direction: column;
-    width: 250px;
-    display: none;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  }
-
-  .navLinks li {
-    padding: 12px 0;
-  }
-
-  .navLinks .link {
-    color: white;
-  }
-
-  .showMenu {
-    display: flex;
-    animation: slideIn 0.3s ease-in-out;
-  }
+    .menuButton {
+        display: block;
+    }
+    .navLinks {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #000;
+        flex-direction: column;
+        width: 250px;
+        display: none;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    .navLinks li {
+        padding: 12px 0;
+    }
+    .navLinks .link {
+        color: white;
+    }
+    .showMenu {
+        display: flex;
+        animation: slideIn 0.3s ease-in-out;
+    }
 }
+
 
 /* Slide-in Animation */
+
 @keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
+
 /* Hover Effect for Links */
+
 .hoverEffect {
-  position: relative;
-  display: inline-block;
-  padding: 10px 15px;
-  overflow: hidden;
-  transition: color 0.3s ease-in-out;
+    position: relative;
+    display: inline-block;
+    padding: 10px 15px;
+    overflow: hidden;
+    transition: color 0.3s ease-in-out;
 }
 
 .hoverEffect::before {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background: rgb(243, 224, 13);
-  transition: width 0.4s ease-in-out;
-  z-index: -1;
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgb(243, 224, 13);
+    transition: width 0.4s ease-in-out;
+    z-index: -1;
 }
 
 .hoverEffect:hover::before {
-  width: 100%;
+    width: 100%;
 }
 
 .hoverEffect:hover {
-  color: #fff;
+    color: #fff;
 }
